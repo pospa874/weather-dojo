@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0-schema
+      author: Ondrej Pospisil
+      comment: 'Migrated schema.sql to liquibase - table weather: id, city, country, temperature'
+      changes:
+        - createTable:
+            tableName: weather
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: city
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: country
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: temperature
+                  type: NUMBER(5, 2)
+                  constraints:
+                    nullable: true
