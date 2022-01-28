@@ -78,3 +78,6 @@ fabric.properties
 
 # Target folder
 target/
+
+# Logs
+logs/

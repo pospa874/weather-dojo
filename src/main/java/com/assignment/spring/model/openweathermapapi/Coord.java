@@ -1,19 +1,14 @@
+package com.assignment.spring.model.openweathermapapi;
 
-package com.assignment.spring.api;
+import com.fasterxml.jackson.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "lon",
-    "lat"
+        "lon",
+        "lat"
 })
 public class Coord {
 
@@ -22,7 +17,7 @@ public class Coord {
     @JsonProperty("lat")
     private Double lat;
     @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, Object> additionalProperties = new HashMap<>();
 
     @JsonProperty("lon")
     public Double getLon() {

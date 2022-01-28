@@ -10,4 +10,7 @@ spring:
     banner-mode: off
 
 logging:
-  level: info
+  level:
+    root: INFO
+  file:
+    name: logs/weather-dojo.log

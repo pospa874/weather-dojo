@@ -29,3 +29,8 @@ databaseChangeLog:
                   type: NUMBER(5, 2)
                   constraints:
                     nullable: true
+              - column:
+                  name: requested_at
+                  type: DATETIME
+                  constraints:
+                    nullable: false
