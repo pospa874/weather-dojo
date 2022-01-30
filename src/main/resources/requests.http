@@ -1,0 +1,27 @@
+### GET request with a valid city
+# curl -X GET --location "http://localhost:8080/weather?city=Amsterdam"
+#    -H "Accept: application/json"
+GET http://localhost:8080/weather?city=Amsterdam
+Accept: application/json
+
+
+### GET request with not existing location / city
+# curl -X GET --location "http://localhost:8080/weather?city=NotExistingCity"
+#    -H "Accept: application/json"
+GET http://localhost:8080/weather?city=NotExistingCity
+Accept: application/json
+
+
+### GET request with not existing parameter && missing required city parameter
+# curl -X GET --location "http://localhost:8080/weather?car=Amsterdam
+#    -H "Accept: application/json"
+GET http://localhost:8080/weather?car=Amsterdam
+Accept: application/json
+
+
+### GET request with not existing resource
+# curl -X GET --location "http://localhost:8080/xyz?car=Amsterdam
+#    -H "Accept: application/json"
+GET http://localhost:8080/xyz?city=Amsterdam
+Accept: application/json
+
