@@ -28,6 +28,7 @@ public class WeatherService {
     public WeatherEntity getWeatherByCityName(String city) {
         WeatherResponse weatherByCityName = openWeatherMapService.getWeatherByCityName(city);
         WeatherEntity entity = weatherMapper.responseToEntity(weatherByCityName);
+        log.debug("Storing data to DB");
         return weatherRepository.save(entity);
     }
 }

@@ -39,7 +39,7 @@ public class OpenWeatherMapService {
 
     private WeatherResponse getWeatherByCityName(@NonNull String url, String city, @NonNull String appId) {
         try {
-            log.info("Calling OpenWeatherMap API for city {}", city);
+            log.debug("Calling OpenWeatherMap API for city: {}", city);
             ResponseEntity<WeatherResponse> response = restTemplate.getForEntity(buildURI(url, city, appId), WeatherResponse.class);
             return response.getBody();
         } catch (HttpClientErrorException e) {

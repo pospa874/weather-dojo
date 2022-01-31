@@ -24,7 +24,7 @@ public class WeatherController {
 
     @GetMapping("/weather")
     public WeatherDto weather(@RequestParam String city) {
-        log.info("Weather endpoint called for city: {}", city);
+        log.debug("Weather endpoint called for city: {}", city);
         WeatherEntity entity = weatherService.getWeatherByCityName(city);
         return weatherMapper.entityToDto(entity);
     }
